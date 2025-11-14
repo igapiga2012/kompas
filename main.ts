@@ -1,7 +1,6 @@
-let waarde_kompas = 0
-waarde_kompas += 90
+let waarde_kompas = input.compassHeading()
 basic.forever(function () {
-    if (waarde_kompas > 44 && waarde_kompas < 136) {
+    if (waarde_kompas > 315 && waarde_kompas < 360 || waarde_kompas > 0 && waarde_kompas < 45) {
         basic.showLeds(`
             . . # . .
             . # # # .
@@ -10,30 +9,30 @@ basic.forever(function () {
             . . # . .
             `)
     }
-    if (waarde_kompas > 134 && waarde_kompas < 226) {
+    if (waarde_kompas < 136 && waarde_kompas > 46) {
         basic.showLeds(`
             . . # . .
-            . # # # .
-            # . # . #
-            . . # . .
+            . . . # .
+            # # # # #
+            . . . # .
             . . # . .
             `)
     }
-    if (waarde_kompas > 316 && waarde_kompas < 224) {
+    if (waarde_kompas > 136 && waarde_kompas < 226) {
         basic.showLeds(`
             . . # . .
-            . # # # .
-            # . # . #
             . . # . .
+            # . # . #
+            . # # # .
             . . # . .
             `)
     }
-    if (waarde_kompas > 46 && waarde_kompas < 314) {
+    if (waarde_kompas > 226 && waarde_kompas < 316) {
         basic.showLeds(`
             . . # . .
-            . # # # .
-            # . # . #
-            . . # . .
+            . # . . .
+            # # # # #
+            . # . . .
             . . # . .
             `)
     }
